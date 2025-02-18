@@ -28,4 +28,4 @@ The project consists of the following main files:
 To get started, clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/digi-note.git
+git clone https://github.com/sajibN/EduAssist.git
