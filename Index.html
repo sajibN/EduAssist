@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persistent Content Website</title>
+    <link rel="stylesheet" href="/EduAssist/index.css">
+</head>
+<body>
+    <header>Digi-Note</header>
+    <div class="navbar">
+        <a onclick="changeSection('bangla')">Bangla</a>
+        <a onclick="changeSection('english')">English</a>
+        
+        <div class="dropdown">
+            <a onclick="toggleGKDropdown()">General Knowledge</a>
+            <div class="dropdown-content">
+                <a onclick="changeSection('international')">International</a>
+                <a onclick="changeSection('national')">National</a>
+            </div>
+        </div>
+    
+        <a onclick="changeSection('edte')">EdTE</a>
+    </div>
+    
+    <div class="container">
+        <h2 id="section-title" style="text-align: center;">Bangla</h2>
+        <!-- Control Panel -->
+        <div class="controls">
+           
+            <label for="bgColor">Background Color:</label>
+            <input type="color" id="bgColor" onchange="changeBackgroundColor(this.value)">
+            
+            <label for="textColor">Text Color:</label>
+            <input type="color" id="textColor" onchange="changeTextColor(this.value)">
+            
+            <label for="fontFamily">Font Family:</label>
+            <select id="fontFamily" onchange="changeFontFamily(this.value)">
+                <option value="Arial">Arial</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+
+            <label for="fontSize">Font Size:</label>
+            <select id="fontSize" onchange="changeFontSize(this.value)">
+                <option value="12px">12px</option>
+                <option value="16px">16px</option>
+                <option value="18px">18px</option>
+                <option value="20px">20px</option>
+                <option value="22px">22px</option>
+            </select>
+
+            <button onclick="toggleBold()">Bold</button>
+            <button onclick="toggleItalic()">Italic</button>
+
+            <button onclick="printContent()">Print</button>
+        </div>
+
+        <!-- Editable content div -->
+        <div id="content" contenteditable="true" class="editable-content" placeholder="Paste your content here..."></div>
+
+        <button onclick="saveContent()">Save</button>
+    </div>
+
+    <script src="/EduAssist/index.js"></script>
+</body>
+</html>
